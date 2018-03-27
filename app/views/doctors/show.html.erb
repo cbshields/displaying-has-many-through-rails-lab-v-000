@@ -5,5 +5,5 @@
 <p>Appointments:</p>
 
 <% @doctor.appointments.each do |appt| %>
-  <%= link_to appt.patient.name, patient_path(appt.patient) %>  <%= appt.appointment_datetime.to_date + " at " + appt.appointment_datetime.to_time %>
+  <%= link_to appt.patient.name, patient_path(appt.patient) %>  <%= (appt.appointment_datetime.to_date).to_s + " at " + (appt.appointment_datetime.to_time).to_s %>
 <% end %>
