@@ -7,7 +7,7 @@
 
 <% @doctor.appointments.each do |appt| %>
 <li>
-  <%= link_to appt.patient.name, patient_path(appt.patient) %>  <%= (appt.appointment_datetime.to_date).to_s + " at " + (Time.parse(appt.appointment_datetime)).to_s %>
+  <%= link_to appt.patient.name, patient_path(appt.patient) %>  <%= (appt.appointment_datetime.to_date).to_s + " at " + (Time.(appt.appointment_datetime)).to_s %>
   </li>
 <% end %>
 </ul>
